@@ -6,35 +6,27 @@
     "token": {
         "secret": "secret",
         "validity": 300,
-        "insecurepaths": ["/hello"],
-        "warningpaths": ["/ups"]
+        "insecurepaths": ["/hi"],
+        "warningpaths": []
     },
     "routes": [
         {
-            "route": "/bye(/:name)",
+            "route": "/hi(/:name)",
             "name": null,
             "controller": "App\\Controller\\Home",
-            "action": "bye",
-            "methods": ["GET"],
-            "conditions": []
-        },
-        {
-            "route": "/hello(/:id)",
-            "name": null,
-            "controller": "App\\Controller\\Home",
-            "action": "bye",
+            "action": "hi",
             "methods": ["GET"],
             "conditions": [
                 {
-                    "id": "[a-zA-Z]{3,}"
+                    "nombre": "[a-zA-Z]{3,}"
                 }
             ]
         },
         {
-            "route": "/hello",
+            "route": "/hi",
             "name": null,
             "controller": "App\\Controller\\Home",
-            "action": "bye",
+            "action": "hi",
             "methods": ["POST"],
             "conditions": []
         }
