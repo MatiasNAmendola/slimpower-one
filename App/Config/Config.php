@@ -69,5 +69,5 @@ define('LOG_FILE', APP_DIR . $config->get('logfile'));
   \Slim\Log::INFO      = 7;
   \Slim\Log::DEBUG     = 8;
  */
-$logLevel = $config->get('logfile', 'INFO');
+$logLevel = $config->get('loglevel', 'INFO');
 define('LOG_LEVEL', \Slim\Log::$logLevel);
