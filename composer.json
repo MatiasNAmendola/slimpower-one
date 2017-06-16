@@ -19,20 +19,20 @@
     ],
     "require": {
         "php": ">=5.3.0",
-        "slim/slim": "2.*",              
+        "slim/slim": "2.*",
         "psr/log": "~1.0",
-        "psr/http-message": "^1.0"
+        "psr/http-message": "^1.0",
+        "matiasnamendola/slimpower-slim": "dev-master",
+        "matiasnamendola/slimpower-config": "dev-master",
+        "matiasnamendola/slimpower-jwt": "dev-master",
+        "matiasnamendola/slimpower-auth-core": "dev-master",
+        "matiasnamendola/slimpower-jwt-auth": "dev-master",
+        "matiasnamendola/slimpower-basic-auth": "dev-master",
+        "matiasnamendola/slimpower-auth-manager": "dev-master"
     },
     "autoload": {
         "psr-4": {
-            "App\\": "App",
-            "SlimPower\\Config\\": "framework/config",
-            "SlimPower\\Slim\\": "framework/slim",
-            "SlimPower\\JWT\\": "framework/jwt",
-            "SlimPower\\Authentication\\": "framework/auth-core",
-            "SlimPower\\JwtAuthentication\\": "framework/jwt-auth",
-            "SlimPower\\HttpBasicAuthentication\\": "framework/basic-auth",
-            "SlimPower\\AuthenticationManager\\": "framework/auth-manager"
+            "App\\": "App"
         }
     }
 }
