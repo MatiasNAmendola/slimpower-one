@@ -1,4 +1,4 @@
-SlimPower - Slim - ONE
+SlimPower - ONE
 
 [![Latest version][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
@@ -58,7 +58,7 @@ or
 
 ### Apache VirtualHost
 
-Create conf file '000-slimpower.conf' in folder '/etc/apache2/sites-available'
+Create conf file 'slimpower.conf' in folder '/etc/apache2/sites-available'
 with this content:
 
 ```conf
@@ -94,7 +94,7 @@ with this content:
         deny from all
     </files>
     
-    <DirectoryMatch "^/.*/(\.svn|CVS)/">
+    <DirectoryMatch "^/.*/(\.git|CVS)/">
         Order deny,allow
         Deny from all
     </DirectoryMatch>
