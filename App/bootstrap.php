@@ -16,7 +16,7 @@ $app = new \SlimPower\Slim\Slim(array(
     'log.writer' => $logWriter));
 
 $authLogin = new SlimPower\Authentication\Callables\DemoAuthenticator($app);
-$authToken = new \SlimPower\Authentication\Callables\NullAuthenticator($app);
+$authToken = new \SlimPower\Authentication\Callables\TokenNullAuthenticator($app);
 $error = new App\Security\CustomError($app);
 $security = \App\Security\SecManager::getInstance($app, $authLogin, $authToken, $error);
 $security->addTokenRelaxed(unserialize(TOKEN_RELAXED));
