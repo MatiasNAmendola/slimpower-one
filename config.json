@@ -31,5 +31,6 @@
             "conditions": []
         }
     ],
-    "logfile": "Logs/log.txt"
+    "logfile": "Logs/log.txt",
+    "loglevel" : "INFO"
 }
