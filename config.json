@@ -23,11 +23,11 @@
             ]
         },
         {
-            "route": "/hi",
+            "route": "/hi(/)",
             "name": null,
             "controller": "App\\Controller\\Home",
             "action": "hi",
-            "methods": ["POST"],
+            "methods": ["GET"],
             "conditions": []
         }
     ],
