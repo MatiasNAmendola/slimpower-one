@@ -1,7 +1,7 @@
-#SlimPower - Slim - ONE
+SlimPower - Slim - ONE
 
 [![Latest version][ico-version]][link-packagist]
-[comment]: # ([![Total Downloads][ico-downloads]][link-downloads])
+[![Total Downloads][ico-downloads]][link-downloads]
 
 [![Latest Stable Version](https://poser.pugx.org/matiasnamendola/slimpower-one/version?format=flat-square)](https://packagist.org/packages/matiasnamendola/slimpower-slim) 
 [![Latest Unstable Version](https://poser.pugx.org/matiasnamendola/slimpower-one/v/unstable?format=flat-square)](//packagist.org/packages/matiasnamendola/slimpower-slim) 
@@ -12,7 +12,7 @@
 
 Slimpower Framework - lightweight version
 
-##Installation
+## Installation
 
 Create folder /var/www/slimpower and download this repository
 
@@ -35,15 +35,16 @@ Or you can add use this as your composer.json:
 }
 ```
 
-###.htaccess
+### .htaccess
+
 Here's an .htaccess sample for simple RESTful API's
 
 ```
 <IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^ index.php [QSA,L]
+    RewriteEngine On
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [QSA,L]
 </IfModule>
 ```
 
@@ -55,43 +56,48 @@ or
 </ifModule>
 ```
 
-###Apache VirtualHost
+### Apache VirtualHost
 
 Create conf file '000-slimpower.conf' in folder '/etc/apache2/sites-available'
 with this content:
 
 ```conf
 <VirtualHost *:80>
-        ServerAdmin             webmaster@localhost
-        ServerName              dev.slimpower.com.ar
-        DocumentRoot            /var/www/slimpower
-        ErrorLog               /var/log/apache2/slimpower-custom-error.log
-        CustomLog              /var/log/apache2/slimpower-custom.log common
-        #TransferLog            /var/log/apache2/slimpower-custom.log
-        <Directory /var/www/slimpower/>
-                Options -Indexes
-                AllowOverride AuthConfig FileInfo
-                AddOutputFilterByType DEFLATE text/html
-                AddOutputFilterByType DEFLATE text/css
-                AddOutputFilterByType DEFLATE application/x-javascript
-                AddOutputFilterByType DEFLATE image/gif
-        </Directory>
-        <files "*.conf">
-            order allow,deny
-            deny from all
-        </files>
-        <files "*.ini">
-            order allow,deny
-            deny from all
-        </files>
-        <files "*.json">
-            order allow,deny
-            deny from all
-        </files>
-        <DirectoryMatch "^/.*/(\.svn|CVS)/">
-            Order deny,allow
-            Deny from all
-        </DirectoryMatch>
+    ServerAdmin     webmaster@localhost
+    ServerName      dev.slimpower.com
+    DocumentRoot    /var/www/slimpower
+    ErrorLog        /var/log/apache2/slimpower-custom-error.log
+    CustomLog       /var/log/apache2/slimpower-custom.log common
+    #TransferLog    /var/log/apache2/slimpower-custom.log
+    
+    <Directory /var/www/slimpower/>
+            Options -Indexes
+            AllowOverride AuthConfig FileInfo
+            AddOutputFilterByType DEFLATE text/html
+            AddOutputFilterByType DEFLATE text/css
+            AddOutputFilterByType DEFLATE application/x-javascript
+            AddOutputFilterByType DEFLATE image/gif
+    </Directory>
+    
+    <files "*.conf">
+        order allow,deny
+        deny from all
+    </files>
+    
+    <files "*.ini">
+        order allow,deny
+        deny from all
+    </files>
+    
+    <files "*.json">
+        order allow,deny
+        deny from all
+    </files>
+    
+    <DirectoryMatch "^/.*/(\.svn|CVS)/">
+        Order deny,allow
+        Deny from all
+    </DirectoryMatch>
 </VirtualHost>
 ```
 
@@ -109,18 +115,13 @@ sudo a2ensite 000-slimpower
 sudo service apache2 restart
 ```
 
-##Security
-
-If you discover any security related issues, please email [soporte.esolutions@gmail.com](mailto:soporte.esolutions@gmail.com?subject=[SECURITY] Config Security Issue) instead of using the issue tracker.
-
-
-##Credits
+## Credits
 
 - [Matías Nahuel Améndola](https://github.com/matiasnamendola)
 - [Franco Soto](https://github.com/francosoto)
 
 
-##License
+## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
