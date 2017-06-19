@@ -39,7 +39,7 @@ class SecManager extends AuthManager implements ManagerInterface {
      * Get login data
      * @return array Login data
      */
-    protected function login() {
+    protected function getLoginData() {
         if (!AUTH_IN_HEADER) {
             $auth = $this->getParams();
         } else {
